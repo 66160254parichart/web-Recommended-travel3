@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recommended tourist attractions in Chonburi Province</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Go Chonburi</h1>
+      <div class="hamburger" id="hamburger-menu">☰</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="travel.html">Travel</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      const hamburger = document.getElementById("hamburger-menu");
+      const navList = document.querySelector(".nav-list");
+
+      hamburger.addEventListener("click", () => {
+        navList.classList.toggle("active");
+      });
+    </script>
+
+    <footer class="footer">
+      <p>&copy; 2024 Travel In Chonburi.</p>
+    </footer>
+  </body>
+</html>
