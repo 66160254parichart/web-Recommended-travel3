@@ -1,36 +1,38 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%; 
-  overflow-x: hidden; 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: prompt, sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-family: prompt, sans-serif;
 }
 
 main {
-  flex: 1; 
-  max-width: 890px;
-  margin: 0 auto;
-  line-height: 40px;
+    flex: 1;
+    max-width: 890px;
+    margin: 0 auto;
+    line-height: 40px;
 }
 
 .header {
-  background-color: rgb(82, 154, 230);
-  color: rgb(0, 0, 0);
-  padding: 1rem;
-  display: flex;
-  justify-content: flex-start; 
-  align-items: center;
-  height: 50px;
-  gap: 2rem;
-  position: relative; 
+    background-color: rgb(82, 154, 230);
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    gap: 2rem;
+    position: relative;
 }
+
 .header h1 {
-  margin: 0;
+    margin: 0;
 }
 
 .footer {
@@ -40,40 +42,44 @@ main {
     text-align: center;
     width: 100%;
     height: 40px;
-  }
+}
 
 .nav-list {
-    display: flex; 
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
     gap: 1rem;
-  }
-  .nav-list li {
+}
+
+.nav-list li {
     list-style: none;
-  }
-  .nav-list a {
+}
+
+.nav-list a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     font-size: 20px;
     transition: color 0.3s;
-  }
-  .nav-list a:hover {
+}
+
+.nav-list a:hover {
     color: #000000;
-  }
-  
-  .hamburger {
-    display: none; 
+}
+
+.hamburger {
+    display: none;
     cursor: pointer;
     font-size: 1.5rem;
-  }
-  
-  .nav-list {
-    display: flex; 
-  }
-  .nav-list.active {
-    display: flex; 
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list.active {
+    display: flex;
     flex-direction: column;
     background-color: rgb(82, 154, 230);
     position: absolute;
@@ -81,16 +87,56 @@ main {
     left: 0;
     width: 100%;
     padding: 1rem;
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .nav-list {
-      display: none; /* ซ่อนเมนูหลัก */
+        display: none;
     }
+
     .nav-list.active {
-      display: flex; /* แสดงเมนูเมื่อกด Hamburger */
+        display: flex;
     }
+
     .hamburger {
-      display: block; /* แสดง Hamburger */
+        display: block;
     }
-  }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-item img,
+.img-khaokheow,
+.img-sichang,
+.img-pattaya,
+.img-jaopor,
+.img-wad {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border: 10px solid rgb(82, 154, 230);
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slide-in 1s ease-out forwards;
+}
+
+.contact-item img:hover,
+.img-khaokheow:hover,
+.img-sichang:hover,
+.img-pattaya:hover,
+.img-jaopor:hover,
+.img-wad:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
