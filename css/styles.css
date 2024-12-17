@@ -1,0 +1,34 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  overflow-x: hidden; 
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: prompt, sans-serif;
+}
+
+main {
+  flex: 1; 
+  max-width: 890px;
+  margin: 0 auto;
+  line-height: 40px;
+}
+
+.header {
+  background-color: rgb(82, 154, 230);
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  height: 50px;
+  gap: 2rem;
+  position: relative; 
+}
+.header h1 {
+  margin: 0;
+}
