@@ -41,3 +41,56 @@ main {
     width: 100%;
     height: 40px;
   }
+
+.nav-list {
+    display: flex; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+  }
+  .nav-list li {
+    list-style: none;
+  }
+  .nav-list a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  .nav-list a:hover {
+    color: #000000;
+  }
+  
+  .hamburger {
+    display: none; 
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .nav-list {
+    display: flex; 
+  }
+  .nav-list.active {
+    display: flex; 
+    flex-direction: column;
+    background-color: rgb(82, 154, 230);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-list {
+      display: none; /* ซ่อนเมนูหลัก */
+    }
+    .nav-list.active {
+      display: flex; /* แสดงเมนูเมื่อกด Hamburger */
+    }
+    .hamburger {
+      display: block; /* แสดง Hamburger */
+    }
+  }
